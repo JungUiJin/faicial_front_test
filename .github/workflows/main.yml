@@ -23,7 +23,7 @@ jobs:
 
       - name: Create .env file
         run: |
-          echo "VITE_API_URL=http://${{ secrets.EC2_PUBLIC_IP }}:5000" > .env
+          echo "VITE_API_URL=https://${{ secrets.EC2_PUBLIC_IP }}" > .env
 
       - name: Install dependencies and build
         run: |
