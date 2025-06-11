@@ -1,5 +1,5 @@
 // ResultPage.tsx
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import styles from '../styles/ResultPage.module.css';
 import ResultDetailSlideUp from '../components/ResultDetailSlideUp';
@@ -22,14 +22,14 @@ export default function ResultPage() {
       finalScores?: Record<string, number>;
       partsImages?: Record<string, string>;
       resultImage?: string;
-      totalDistance?: Record<string, number>
+      totalDistance?: Record<string, number>;
     };
+
     if (state.finalScores) setFinalScores(state.finalScores);
     if (state.totalDistance) setTotalDistance(state.totalDistance);
     if (state.partsImages) setPartsImages(state.partsImages);
 
-    // const storedImage = localStorage.getItem('FAIcialImage');
-    const storedImage = state.resultImage
+    const storedImage = state.resultImage;
     if (storedImage) {
       setImageSrc(storedImage);
     }
@@ -54,7 +54,7 @@ export default function ResultPage() {
     const shareData = {
       title: 'FAIcial 결과',
       text: 'AI가 분석한 내 얼굴 대칭 결과를 확인해보세요!',
-      url: 'localhost:5173', // 추후 배포 도메인으로 변경 예정
+      url: 'https://faicial.site', // ✅ 고정된 메인 페이지 링크
     };
 
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -111,13 +111,13 @@ export default function ResultPage() {
         </div>
       </div>
 
-      {/* ✅ 슬라이드업 표시 */}
+      {/* ✅ 상세 결과 슬라이드업 */}
       {showDetail && (
-        <ResultDetailSlideUp 
-        onClose={() => setShowDetail(false)}
-        finalScores={finalScores}
-        totalDistance={totalDistance}
-        partsImages={partsImages}
+        <ResultDetailSlideUp
+          onClose={() => setShowDetail(false)}
+          finalScores={finalScores}
+          totalDistance={totalDistance}
+          partsImages={partsImages}
         />
       )}
     </div>
