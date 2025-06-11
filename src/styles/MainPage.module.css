@@ -1,0 +1,314 @@
+button {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    box-shadow: none;
+  }
+  
+  button:focus,
+  button:active,
+  button:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to bottom, #ffffff, #c4d5e7);
+    overflow: hidden;
+    padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
+    box-sizing: border-box;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ffffff, #c4d5e7);
+    padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .cardBox {
+    width: 100%;
+    max-width: 640px;
+    min-height: 720px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    padding: 40px 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #003DF6;
+  }
+  
+  .previewBox {
+    width: 350px;
+    height: 370px;
+    border: 2px dashed #c5c8ce;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  
+  .previewImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  
+  .notice {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ff4d4f;
+    margin-top: 12px;
+    line-height: 1.5;
+  }
+  
+  .inputFile {
+    margin-bottom: 20px;
+  }
+  
+  .uploadButton {
+    width: 100%;
+    max-width: 350px;
+    font-size: 16px;
+    padding: 14px;
+    border-radius: 40px;
+    background-color: #003DF6;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .uploadButton:hover {
+    background-color: #002bb5;
+  }
+  
+  .logo {
+    width: 80%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .flipped {
+    transform: scaleX(-1.0);
+    transform-origin: center;
+    transform: 0.001s;
+  }
+  
+  .loaderBar {
+    width: 80%;
+    height: 6px;
+    background-color: #e5e5e5;
+    border-radius: 4px;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  
+  .progressLoader {
+    height: 100%;
+    width: 100%;
+    background-color: #375EF9;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: progressGrow 6s linear forwards;
+    border-radius: 4px;
+  }
+  
+  @keyframes progressGrow {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+  
+  .loadingText {
+    margin-top: 25px;
+    font-size: 17px;
+    text-align: center;
+    font-weight: 600;
+    color: #000;
+  }
+  
+  .selectButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+    gap: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .selectButtons button {
+    width: 100%;
+    font-size: 16px;
+    padding: 14px;
+    border-radius: 20px;
+    border: none;
+    background-color: #f0f0f0;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .selectButtons button:hover {
+    background-color: #e2e2e2;
+  }
+  
+  .highlightButton {
+    background-color: #003DF6;
+    color: #fff;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 60px;
+    box-shadow: 0 4px 10px rgba(0, 61, 246, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+    outline: none;
+    
+  }
+  
+  .highlightButton:hover {
+    background-color: #002bb5;
+    transform: translateY(-1px);
+  }
+  
+  .highlightButton:focus-visible {
+    outline: none;
+  }
+  
+  .resultActions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .actionBtn {
+    background-color: #f7f8fa;
+    border: 1px solid #dcdfe6;
+    border-radius: 12px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    min-width: 100px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    outline: none;
+  }
+  
+  .actionBtn:hover {
+    background-color: #ebedf0;
+    transform: translateY(-1px);
+  }
+  
+  .actionBtn:focus-visible {
+    outline: none;
+  }
+  
+  /* 모바일 최적화 */
+  @media (max-width: 480px) {
+    .cardBox {
+      max-width: 90%;
+      margin: 0 16px;
+      padding: 30px 20px;
+      min-height: auto;
+    }
+  
+    .title {
+      font-size: 20px;
+    }
+  
+    .previewBox {
+      width: 90%;
+      max-width: 320px;
+      height: 310px;
+      min-height: unset;
+      padding: 20px;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+  
+    .previewImage {
+      max-width: 100%;
+      max-height: 100%;
+      height: auto;
+      width: auto;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+  
+    .notice {
+      font-size: 15px;
+    }
+  
+    .uploadButton {
+      font-size: 16px;
+      padding: 14px 30px;
+      width: 90%;
+      border-radius: 40px;
+    }
+    
+  
+    .selectButtons {
+      flex-direction: column;
+      width: 90%;
+      gap: 10px;
+      margin-bottom: 5px;
+    }
+  
+    .selectButtons button {
+      width: 100%;
+      font-size: 14px;
+      padding: 14px;
+      border-radius: 20px;
+    }
+  
+    .logo {
+      max-width: 160px;
+      margin-bottom: 30px;
+    }
+  
+    .loadingText {
+      font-size: 15px;
+      margin-top: 15px;
+    }
+  }
+  

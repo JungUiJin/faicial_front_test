@@ -1,0 +1,249 @@
+/* 공통 버튼 초기화 */
+button {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    box-shadow: none;
+  }
+  
+  button:focus,
+  button:active,
+  button:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  /* 배경 및 전체 화면 중앙 정렬 */
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;       /* ✅ 최소 화면 높이 확보 */
+    width: 100%;
+    background: linear-gradient(to bottom, #ffffff, #c4d5e7);
+    overflow-x: hidden; /* 🔒 좌우 스크롤 방지 */
+    overflow-y: auto;         /* ✅ 스크롤 허용 */
+    padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
+    box-sizing: border-box;
+  }
+  
+  /* 카드 박스 스타일 (MainPage와 통일) */
+  .container {
+    width: 100%;
+    max-width: 640px;
+    min-height: 720px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    padding: 32px 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .cardBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  /* 로고 및 타이틀 */
+  .logo {
+    width: 80%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+    display: block;        
+    margin-left: auto;      
+    margin-right: auto;   
+    margin-bottom: 10px;  
+  }
+  
+  .title {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #000;
+    margin-top: 10px;
+  }
+  
+  /* 이미지 결과 박스 */
+  .resultBox {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 20px;
+    color: #000;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .resultImage {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    border-radius: 0; /* ✅ 부모와 통일하거나 제거 */
+  }
+  
+  
+  .resultOverlay {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: black;
+    text-shadow: 0 6px 20px rgba(255, 255, 255, 0.7);
+  }
+  
+  
+  
+  /* 텍스트 */
+  .summary {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px 0;
+    color: #000;
+    text-align: center;
+  }
+  
+  /* 주요 버튼 */
+  .highlightButton {
+    background-color: #003DF6;
+    color: #fff;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 20px auto;        /* ✅ 좌우 auto → 가운데 정렬 */
+    box-shadow: 0 4px 10px rgba(0, 61, 246, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+    display: block;           /* ✅ block 요소로 만들어야 auto 정렬 적용됨 */
+    width: 100%;
+    max-width: 340px;         /* ✅ 더 넓게 */
+    text-align: center;
+  }
+  
+  
+  .highlightButton:hover {
+    background-color: #002bb5;
+    transform: translateY(-1px);
+  }
+  
+  .highlightButton:focus-visible {
+    outline: none;
+  }
+  
+  .resultActions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .actionBtn {
+    background-color: #f7f8fa;
+    border: 1px solid #dcdfe6;
+    border-radius: 16px;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+    min-width: 100px;
+    text-align: center;
+  }
+  
+  .actionBtn:hover {
+    background-color: #ebedf0;
+    transform: translateY(-1px);
+  }
+  
+  
+  /* 모바일 반응형 */
+  @media (max-width: 480px) {
+    .container {
+      width: 90%;
+      margin: 0 auto;
+      padding: 24px 16px;
+      min-height: auto;
+      border-radius: 16px;
+    }
+  
+    .logo {
+      max-width: 160px;
+      margin-bottom: 12px;
+    }
+  
+    .title {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  
+    .resultBox {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    max-height: 400px; /* 이미지 너무 커지는 것 방지 */
+    padding: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+    }
+
+    .resultImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    }
+
+  
+    .summary {
+      font-size: 15px;
+      margin-top: 10px;
+    }
+  
+    .highlightButton {
+      font-size: 15px;
+      padding: 12px;
+      width: 100%;
+      border-radius: 40px;
+      margin: 16px 0;
+    }
+  
+    resultActions {
+        flex-direction: row;     /* ✅ 세로에서 가로로 변경 */
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 10px;
+        margin-top: 16px;
+      }
+  
+    .actionBtn {
+        font-size: 14px;
+        padding: 12px 20px;
+        border-radius: 16px;
+        flex: 1 1 auto;          /* ✅ 너비 유동적 (줄어들거나 늘어남) */
+        min-width: 90px;         /* ✅ 버튼 최소 너비 */
+        text-align: center;
+      }
+      
+      .actionBtn:hover {
+        background-color: #ebedf0;
+        transform: translateY(-1px);
+      }
+  }
+  

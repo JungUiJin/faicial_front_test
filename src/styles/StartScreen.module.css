@@ -1,0 +1,160 @@
+/* StartScreen.module.css */
+
+.container {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #ffffff, #c4d5e7);
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+  
+  
+  /* 가운데 내용 박스 */
+  .gradientBackground {
+    width: 100%;
+    max-width: 640px; /* 💡 너무 좁지 않게 */
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 40px 32px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  .logo {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 0;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+    text-align: center;
+  }
+  
+  .subtextWrapper {
+    margin-bottom: 20px;
+  }
+  
+  .subtext {
+    font-size: 18px;
+    text-align: center;
+    color: black;
+  }
+  
+  .bold {
+    color: #003DF6;
+    font-weight: bold;
+  }
+  
+  .checkboxRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 0 25px;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .checkboxContainer {
+    cursor: pointer;
+  }
+  
+  .checkbox {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    border: 2px solid #01C412;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .checkboxChecked {
+    background-color: #01C412;
+  }
+  
+  .checkmark {
+    color: #ffffff;
+    font-size: 16px;
+  }
+  
+  .checkboxText {
+    flex: 1 1 100%;
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .faceIcon {
+    margin-top: 20px;
+    width: 25vw;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 50px;
+  }
+  
+  .button {
+    background-color: #003DF6;
+    padding: 18px 40px;
+    border-radius: 40px;
+    width: 60%;
+    max-width: 300px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .buttonDisabled {
+    background-color: #AAC6FF;
+    cursor: not-allowed;
+  }
+  
+  @media (max-width: 480px) {
+    .gradientBackground {
+        max-width: 90%;
+        margin: 0 16px;
+      }
+    .checkboxRow {
+        padding: 0 12px;
+    }
+    
+    .title {
+      font-size: 20px;
+    }
+  
+    .subtext {
+      font-size: 16px;
+    }
+  
+    .checkboxText {
+      font-size: 12px;
+    }
+  
+    .button {
+      font-size: 16px;
+      padding: 14px 30px;
+    }
+
+  }
+  
