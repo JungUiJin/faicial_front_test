@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'; // useEffect 추가
+import { useState, useEffect } from 'react'; // useEffect 추가
 import { useNavigate } from 'react-router-dom';
 import styles from '../styles/StartScreen.module.css';
 
