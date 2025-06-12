@@ -74,7 +74,9 @@ export default function ResultPage() {
       }
     }
   };
-  console.log(finalScores)
+  console.log(`finalscores: ${finalScores}`);
+  console.log(`totalDistance: ${{totalDistance}}`);
+  console.log(`part_images : ${partsImages}`);
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
