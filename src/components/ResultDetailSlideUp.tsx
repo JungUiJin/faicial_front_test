@@ -18,9 +18,6 @@ export default function ResultDetailSlideUp({
   const [animatedIndices, setAnimatedIndices] = useState<number[]>([]);
 
   const metricDataList = useMemo(() => [
-    console.log('📌 finalScores:', finalScores);
-    console.log('📌 totalDistance:', totalDistance);
-    console.log('📌 partsImages:', partsImages);
     {
       label: 'short',
       imageLeft: partsImages.left_eye,
@@ -68,7 +65,7 @@ export default function ResultDetailSlideUp({
 
     });
   }, [metricDataList]);
-
+  console.log('🔍 metricDataList', metricDataList);
   return (
     <div className={`${styles.slideUpContainer} ${visible ? styles.show : ''}`}>
       <div className={styles.slideCard}>
