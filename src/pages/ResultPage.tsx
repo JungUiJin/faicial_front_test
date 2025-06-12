@@ -52,8 +52,8 @@ export default function ResultPage() {
 
   const handleShare = async () => {
     const shareData = {
-      title: 'FAIcial 결과',
-      text: 'AI가 분석한 내 얼굴 대칭 결과를 확인해보세요!',
+      title: 'FAIcial 안면 비대칭 판별 서비스',
+      text: '사진만 올리면 AI가 내 얼굴의 좌우 균형을 분석해줘요!',
       url: 'https://faicial.site', // ✅ 고정된 메인 페이지 링크
     };
 
