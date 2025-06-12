@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /
+Allow: /$
+Allow: /main$
+
+Sitemap: https://faicial.site/sitemap.xml
