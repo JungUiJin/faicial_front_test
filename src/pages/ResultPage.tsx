@@ -24,10 +24,13 @@ export default function ResultPage() {
       resultImage?: string;
       totalDistance?: Record<string, number>;
     };
+    console.log(`state.finalscores: `, state.finalScores);
+    console.log(`state.totalDistance: `, state.totalDistance);
+    console.log(`state.part_images : `, state.totalDistance);
 
     if (state.finalScores) setFinalScores(state.finalScores);
     if (state.totalDistance) setTotalDistance(state.totalDistance);
-    if (state.partsImages) setPartsImages(state.partsImages);
+    if (state.totalDistance) setPartsImages(state.partsImages);
 
     const storedImage = state.resultImage;
     if (storedImage) {
