@@ -18,7 +18,7 @@
   
 
   .show {
-    transform: translateX(-50%) translateY(-5%);
+    transform: translateX(-50%) translateY(0%);
   }
   
   .detailCard {
