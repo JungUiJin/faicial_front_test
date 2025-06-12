@@ -74,7 +74,7 @@ export default function ResultPage() {
       }
     }
   };
-
+  console.log(finalScores)
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
