@@ -24,7 +24,7 @@ export default function ResultPage() {
       resultImage?: string;
       totalDistance?: Record<string, number>;
     };
-    console.log(`state.finalscores: `, state.finalScores);
+    console.log(`state.finalScores: `, state.finalScores);
     console.log(`state.totalDistance: `, state.totalDistance);
     console.log(`state.part_images : `, state.totalDistance);
 

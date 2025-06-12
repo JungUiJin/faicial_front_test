@@ -57,7 +57,7 @@ export default function MainPage() {
         navigate('/result', {
           state: {
             finalScore: result.final_score,
-            finalScores: result.final_socres,
+            finalScores: result.final_scores,
             partsImages: result.parts_images,
             resultImage: result.result_image,
             totalDistance: result.total_distance
