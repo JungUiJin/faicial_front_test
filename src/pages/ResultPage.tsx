@@ -30,7 +30,7 @@ export default function ResultPage() {
 
     if (state.finalScores) setFinalScores(state.finalScores);
     if (state.totalDistance) setTotalDistance(state.totalDistance);
-    if (state.totalDistance) setPartsImages(state.partsImages);
+    if (state.partsImages) setPartsImages(state.partsImages);
 
     const storedImage = state.resultImage;
     if (storedImage) {
