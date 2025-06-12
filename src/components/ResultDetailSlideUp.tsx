@@ -18,6 +18,9 @@ export default function ResultDetailSlideUp({
   const [animatedIndices, setAnimatedIndices] = useState<number[]>([]);
 
   const metricDataList = useMemo(() => [
+    console.log('📌 finalScores:', finalScores);
+    console.log('📌 totalDistance:', totalDistance);
+    console.log('📌 partsImages:', partsImages);
     {
       label: 'short',
       imageLeft: partsImages.left_eye,
